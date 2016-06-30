@@ -10,6 +10,7 @@
 		0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EC51D2596CC00805887 /* AppDelegate.swift */; };
 		0EA99EC81D2596CC00805887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC71D2596CC00805887 /* Assets.xcassets */; };
 		0EA99ECB1D2596CC00805887 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC91D2596CC00805887 /* MainMenu.xib */; };
+		0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EED1D259ACC00805887 /* StatusMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		0EA99ECC1D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA99ED11D2596CC00805887 /* ImageOfTheDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageOfTheDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99ED71D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EA99EED1D259ACC00805887 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +73,8 @@
 		0EA99EC41D2596CC00805887 /* ImageOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				0EA99EC51D2596CC00805887 /* AppDelegate.swift */,
-				0EA99EC71D2596CC00805887 /* Assets.xcassets */,
-				0EA99EC91D2596CC00805887 /* MainMenu.xib */,
-				0EA99ECC1D2596CC00805887 /* Info.plist */,
+				0EA99EE91D259A3600805887 /* App */,
+				0EA99EEA1D259A4400805887 /* Controllers */,
 			);
 			path = ImageOfTheDay;
 			sourceTree = "<group>";
@@ -85,6 +85,25 @@
 				0EA99ED71D2596CC00805887 /* Info.plist */,
 			);
 			path = ImageOfTheDayTests;
+			sourceTree = "<group>";
+		};
+		0EA99EE91D259A3600805887 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0EA99EC51D2596CC00805887 /* AppDelegate.swift */,
+				0EA99EC71D2596CC00805887 /* Assets.xcassets */,
+				0EA99EC91D2596CC00805887 /* MainMenu.xib */,
+				0EA99ECC1D2596CC00805887 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		0EA99EEA1D259A4400805887 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EA99EED1D259ACC00805887 /* StatusMenuController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */,
 				0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +391,7 @@
 				0EA99EDC1D2596CC00805887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EA99EDD1D2596CC00805887 /* Build configuration list for PBXNativeTarget "ImageOfTheDayTests" */ = {
 			isa = XCConfigurationList;
@@ -379,6 +400,7 @@
 				0EA99EDF1D2596CC00805887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
