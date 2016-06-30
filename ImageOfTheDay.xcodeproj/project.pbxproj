@@ -11,6 +11,8 @@
 		0EA99EC81D2596CC00805887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC71D2596CC00805887 /* Assets.xcassets */; };
 		0EA99ECB1D2596CC00805887 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC91D2596CC00805887 /* MainMenu.xib */; };
 		0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EED1D259ACC00805887 /* StatusMenuController.swift */; };
+		0EA99EF11D25AB1500805887 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EF01D25AB1500805887 /* Fixture.swift */; };
+		0EA99EF31D25AD9A00805887 /* bing.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EF21D25AD9A00805887 /* bing.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		0EA99ED11D2596CC00805887 /* ImageOfTheDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageOfTheDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99ED71D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA99EED1D259ACC00805887 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		0EA99EF01D25AB1500805887 /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		0EA99EF21D25AD9A00805887 /* bing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bing.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		0EA99ED41D2596CC00805887 /* ImageOfTheDayTests */ = {
 			isa = PBXGroup;
 			children = (
+				0EA99EEF1D25AACA00805887 /* Fixtures */,
 				0EA99ED71D2596CC00805887 /* Info.plist */,
 			);
 			path = ImageOfTheDayTests;
@@ -104,6 +109,15 @@
 				0EA99EED1D259ACC00805887 /* StatusMenuController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0EA99EEF1D25AACA00805887 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0EA99EF21D25AD9A00805887 /* bing.json */,
+				0EA99EF01D25AB1500805887 /* Fixture.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA99EF31D25AD9A00805887 /* bing.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA99EF11D25AB1500805887 /* Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,11 +366,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ImageOfTheDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.ImageOfTheDayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageOfTheDay.app/Contents/MacOS/ImageOfTheDay";
 			};
 			name = Debug;
@@ -363,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ImageOfTheDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
