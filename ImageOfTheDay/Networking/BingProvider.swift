@@ -21,4 +21,20 @@ struct BingProvider {
         self.session = session
     }
 
+    /**
+     Fetch the latest image of the day.
+     */
+    func fetchLatestImage() {
+        let components = NSURLComponents( URL: baseURL, resolvingAgainstBaseURL: false)!
+        var queryItems = components.queryItems
+        queryItems?.append(NSURLQueryItem(name: "idx", value: "0"))
+        queryItems?.append(NSURLQueryItem(name: "n", value: "1"))
+        components.queryItems = queryItems
+
+        session.dataTaskWithURL(components.URL!) { data, response, error in
+
+        }
+
+    }
+
 }

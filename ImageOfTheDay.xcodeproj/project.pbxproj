@@ -17,6 +17,7 @@
 		0EA99EF91D25B04000805887 /* ImageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EF81D25B04000805887 /* ImageModelTests.swift */; };
 		0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EFC1D26EE5400805887 /* BingProvider.swift */; };
 		0EA99F001D26EE9700805887 /* BingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EFF1D26EE9700805887 /* BingProviderTests.swift */; };
+		0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F021D26F78500805887 /* FakeURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0EA99EF81D25B04000805887 /* ImageModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModelTests.swift; sourceTree = "<group>"; };
 		0EA99EFC1D26EE5400805887 /* BingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProvider.swift; sourceTree = "<group>"; };
 		0EA99EFF1D26EE9700805887 /* BingProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderTests.swift; sourceTree = "<group>"; };
+		0EA99F021D26F78500805887 /* FakeURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0EA99ED71D2596CC00805887 /* Info.plist */,
 				0EA99EF51D25AF7300805887 /* Models */,
 				0EA99EFB1D26EDB500805887 /* Networking */,
+				0EA99F011D26F75800805887 /* Test Helpers */,
 			);
 			path = ImageOfTheDayTests;
 			sourceTree = "<group>";
@@ -162,6 +165,15 @@
 				0EA99EFF1D26EE9700805887 /* BingProviderTests.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		0EA99F011D26F75800805887 /* Test Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0EA99F021D26F78500805887 /* FakeURLSession.swift */,
+			);
+			name = "Test Helpers";
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA99EF11D25AB1500805887 /* Fixture.swift in Sources */,
+				0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */,
 				0EA99EF91D25B04000805887 /* ImageModelTests.swift in Sources */,
 				0EA99F001D26EE9700805887 /* BingProviderTests.swift in Sources */,
 			);

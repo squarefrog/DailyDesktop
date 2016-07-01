@@ -31,4 +31,19 @@ class BingProviderTests: XCTestCase {
 
     }
 
+    func test_BingProvider_WhenFetchingLatestImage_UsesCorrectURL() {
+
+        // Given
+        let session = FakeSession()
+        XCTAssertNil(session.requestedURL)
+        let provider = BingProvider(withSession: session)
+
+        // When
+        provider.fetchLatestImage()
+
+        // Then
+        XCTAssertEqual(session.requestedURL?.absoluteString, "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")
+
+    }
+
 }
