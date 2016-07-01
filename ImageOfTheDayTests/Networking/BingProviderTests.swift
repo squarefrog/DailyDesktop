@@ -18,4 +18,17 @@ class BingProviderTests: XCTestCase {
 
     }
 
+    func test_BingProvider_ShouldHaveABaseURL() {
+
+        // Given
+        let provider = BingProvider(withSession: NSURLSession.sharedSession())
+
+        // When
+        let baseURL = provider.baseURL
+
+        // Then
+        XCTAssertEqual(baseURL.absoluteString, "http://www.bing.com/HPImageArchive.aspx?format=js")
+
+    }
+
 }
