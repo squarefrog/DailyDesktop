@@ -70,4 +70,30 @@ class BingProviderTests: XCTestCase {
         XCTAssertEqual(returnedData, jsonData)
 
     }
+
+    func test_BingProvider_WhenFetchingLatestImage_ShouldReturnError() {
+
+        // Given
+        let session = FakeSession()
+        let error = NSError(domain: "bing.tests", code: 404, userInfo: nil)
+        session.error = error
+        let provider = BingProvider(withSession: session)
+        var returnedError: NSError?
+        let expectation = expectationWithDescription("Should pass error back")
+
+        // When
+        provider.fetchLatestImage { result in
+            switch result {
+            case .Success: XCTFail()
+            case .Failure(let e): returnedError = e
+            }
+            expectation.fulfill()
+        }
+
+        // Then
+        waitForExpectationsWithTimeout(1.0, handler: nil)
+        XCTAssertEqual(returnedError, error)
+
+    }
+
 }

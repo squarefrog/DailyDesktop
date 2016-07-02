@@ -32,6 +32,7 @@ struct BingProvider {
         components.queryItems = queryItems
 
         session.dataTaskWithURL(components.URL!) { data, response, error in
+            guard error == nil else { return completion(.Failure(error!)) }
 
             guard let validData = data else {
                 return
