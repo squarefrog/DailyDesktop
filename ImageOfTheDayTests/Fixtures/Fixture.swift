@@ -12,11 +12,15 @@ enum Fixture: String {
     case Bing = "bing"
 
     func jsonData() throws -> AnyObject {
+        let data = try nsData()
+        return try NSJSONSerialization.JSONObjectWithData(data, options: [ ])
+    }
+
+    func nsData() throws -> NSData {
         let bundle = NSBundle(forClass: Fixture.DummyClass.self)
         guard let path = bundle.pathForResource(self.rawValue, ofType: "json") else {
             throw FixtureError.UnknownFile("\(self.rawValue).json")
         }
-        let data = NSFileManager.defaultManager().contentsAtPath(path)!
-        return try NSJSONSerialization.JSONObjectWithData(data, options: [ ])
+        return NSFileManager.defaultManager().contentsAtPath(path)!
     }
 }
