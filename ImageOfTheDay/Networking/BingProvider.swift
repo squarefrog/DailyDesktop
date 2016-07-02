@@ -33,6 +33,7 @@ struct BingProvider {
 
         session.dataTaskWithURL(components.URL!) { data, response, error in
             guard error == nil else { return completion(.Failure(error!)) }
+
             guard let urlResponse = response as? NSHTTPURLResponse else {
                 return completion(.Failure(Error(errorCode: .EmptyResponse)))
             }
@@ -45,10 +46,10 @@ struct BingProvider {
             }
 
             guard let validData = data else {
-                return
+                return completion(.Failure(Error(errorCode: .EmptyData)))
             }
 
-            completion(Result.Success(validData))
+            completion(.Success(validData))
         }
 
     }
