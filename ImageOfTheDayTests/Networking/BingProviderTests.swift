@@ -169,4 +169,20 @@ class BingProviderTests: XCTestCase {
         XCTAssertEqual(returnedError, Error(errorCode: .EmptyData))
 
     }
+
+    func test_BingProvider_ShouldAllowFetchingMultipleImages() {
+
+        // Given
+        let session = FakeSession()
+        XCTAssertNil(session.requestedURL)
+        let provider = BingProvider(withSession: session)
+        let imageURL = NSURL(string: "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=3")!
+
+        // When
+        provider.fetchLatestImages(withCount: 3) { _ in }
+
+        // Then
+        XCTAssertEqual(session.requestedURL, imageURL)
+
+    }
 }
