@@ -34,7 +34,7 @@ struct BingProvider {
         session.dataTaskWithURL(components.URL!) { data, response, error in
             guard error == nil else { return completion(.Failure(error!)) }
             guard let urlResponse = response as? NSHTTPURLResponse else {
-                return
+                return completion(.Failure(Error(errorCode: .EmptyResponse)))
             }
 
             switch urlResponse.statusCode {

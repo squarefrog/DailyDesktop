@@ -123,4 +123,27 @@ class BingProviderTests: XCTestCase {
 
     }
 
+    func test_BingProvider_WhenFetchingLatestImage_ShouldCreateEmptyResponseError() {
+
+        // Given
+        let session = FakeSession()
+        let provider = BingProvider(withSession: session)
+        var returnedError: NSError?
+        let expectation = expectationWithDescription("Should pass error back")
+
+        // When
+        provider.fetchLatestImage { result in
+            switch result {
+            case .Success: XCTFail()
+            case .Failure(let e): returnedError = e
+            }
+            expectation.fulfill()
+        }
+
+        // Then
+        waitForExpectationsWithTimeout(1.0, handler: nil)
+        XCTAssertEqual(returnedError, Error(errorCode: .EmptyResponse))
+
+    }
+
 }
