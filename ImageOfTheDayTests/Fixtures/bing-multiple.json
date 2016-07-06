@@ -1,0 +1,59 @@
+{
+    "images": [
+        {
+            "bot": 1,
+            "copyright": "image 1",
+            "copyrightlink": "http://www.bing.com/image1",
+            "drk": 1,
+            "enddate": "20160704",
+            "fullstartdate": "201607032300",
+            "hs": [],
+            "hsh": "82a66c641febf928adde7c8d8c253554",
+            "msg": [],
+            "startdate": "20160703",
+            "top": 1,
+            "url": "/image1.jpg",
+            "urlbase": "/az/hprichbg/rb/SpottedPorcupinefish_EN-GB11134793223",
+            "wp": true
+        },
+        {
+            "bot": 1,
+            "copyright": "image 2",
+            "copyrightlink": "http://www.bing.com/image2",
+            "drk": 1,
+            "enddate": "20160703",
+            "fullstartdate": "201607022300",
+            "hs": [],
+            "hsh": "61bdbaa9bcc234d4c2465ceaaf240dca",
+            "msg": [],
+            "startdate": "20160702",
+            "top": 1,
+            "url": "/image2.jpg",
+            "urlbase": "/az/hprichbg/rb/SchonbrunnPalace_EN-GB11308807854",
+            "wp": true
+        },
+        {
+            "bot": 1,
+            "copyright": "image 3",
+            "copyrightlink": "http://www.bing.com/image3",
+            "drk": 1,
+            "enddate": "20160702",
+            "fullstartdate": "201607012300",
+            "hs": [],
+            "hsh": "33e6da3b098faeb2fced64b3e1c1a855",
+            "msg": [],
+            "startdate": "20160701",
+            "top": 1,
+            "url": "/image3.jpg",
+            "urlbase": "/az/hprichbg/rb/BathurstBay_EN-GB15439862994",
+            "wp": true
+        }
+    ],
+    "tooltips": {
+        "loading": "Loading...",
+        "next": "Next image",
+        "previous": "Previous image",
+        "walle": "This image is not available to download as wallpaper.",
+        "walls": "Download this image. Use of this image is restricted to wallpaper only."
+    }
+}

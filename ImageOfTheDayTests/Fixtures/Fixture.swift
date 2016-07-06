@@ -10,6 +10,7 @@ enum Fixture: String {
     class DummyClass { }
 
     case Bing = "bing"
+    case BingMultiple = "bing-multiple"
 
     func jsonData() throws -> AnyObject {
         let data = try nsData()

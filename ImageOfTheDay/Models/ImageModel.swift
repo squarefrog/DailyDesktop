@@ -23,3 +23,13 @@ struct ImageModel {
     let webPageURL: NSURL
 
 }
+
+extension ImageModel: Equatable { }
+
+func ==(lhs: ImageModel, rhs: ImageModel) -> Bool {
+    return lhs.date == rhs.date &&
+        lhs.url == rhs.url &&
+        lhs.title == rhs.title &&
+        lhs.description == rhs.description &&
+        lhs.webPageURL == rhs.webPageURL
+}

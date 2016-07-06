@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E9A2D271D2AD985007640A6 /* bing-multiple.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E9A2D261D2AD985007640A6 /* bing-multiple.json */; };
 		0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EC51D2596CC00805887 /* AppDelegate.swift */; };
 		0EA99EC81D2596CC00805887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC71D2596CC00805887 /* Assets.xcassets */; };
 		0EA99ECB1D2596CC00805887 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC91D2596CC00805887 /* MainMenu.xib */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E9A2D261D2AD985007640A6 /* bing-multiple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bing-multiple.json"; sourceTree = "<group>"; };
 		0EA99EC21D2596CC00805887 /* ImageOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99EC51D2596CC00805887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA99EC71D2596CC00805887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA99EF21D25AD9A00805887 /* bing.json */,
+				0E9A2D261D2AD985007640A6 /* bing-multiple.json */,
 				0EA99EF01D25AB1500805887 /* Fixture.swift */,
 			);
 			path = Fixtures;
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA99EF31D25AD9A00805887 /* bing.json in Resources */,
+				0E9A2D271D2AD985007640A6 /* bing-multiple.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
