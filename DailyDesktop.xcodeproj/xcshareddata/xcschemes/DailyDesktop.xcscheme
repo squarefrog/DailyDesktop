@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA99ED01D2596CC00805887"
-               BuildableName = "DailyDesktop.xctest"
+               BuildableName = "DailyDesktopTests.xctest"
                BlueprintName = "DailyDesktopTests"
                ReferencedContainer = "container:DailyDesktop.xcodeproj">
             </BuildableReference>
