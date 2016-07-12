@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA99EC11D2596CC00805887"
-               BuildableName = "ImageOfTheDay.app"
-               BlueprintName = "ImageOfTheDay"
-               ReferencedContainer = "container:ImageOfTheDay.xcodeproj">
+               BuildableName = "DailyDesktop.app"
+               BlueprintName = "DailyDesktop"
+               ReferencedContainer = "container:DailyDesktop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA99ED01D2596CC00805887"
-               BuildableName = "ImageOfTheDayTests.xctest"
-               BlueprintName = "ImageOfTheDayTests"
-               ReferencedContainer = "container:ImageOfTheDay.xcodeproj">
+               BuildableName = "DailyDesktop.xctest"
+               BlueprintName = "DailyDesktopTests"
+               ReferencedContainer = "container:DailyDesktop.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA99EC11D2596CC00805887"
-            BuildableName = "ImageOfTheDay.app"
-            BlueprintName = "ImageOfTheDay"
-            ReferencedContainer = "container:ImageOfTheDay.xcodeproj">
+            BuildableName = "DailyDesktop.app"
+            BlueprintName = "DailyDesktop"
+            ReferencedContainer = "container:DailyDesktop.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA99EC11D2596CC00805887"
-            BuildableName = "ImageOfTheDay.app"
-            BlueprintName = "ImageOfTheDay"
-            ReferencedContainer = "container:ImageOfTheDay.xcodeproj">
+            BuildableName = "DailyDesktop.app"
+            BlueprintName = "DailyDesktop"
+            ReferencedContainer = "container:DailyDesktop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA99EC11D2596CC00805887"
-            BuildableName = "ImageOfTheDay.app"
-            BlueprintName = "ImageOfTheDay"
-            ReferencedContainer = "container:ImageOfTheDay.xcodeproj">
+            BuildableName = "DailyDesktop.app"
+            BlueprintName = "DailyDesktop"
+            ReferencedContainer = "container:DailyDesktop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

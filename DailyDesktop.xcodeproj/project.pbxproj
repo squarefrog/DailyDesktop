@@ -31,18 +31,18 @@
 			containerPortal = 0EA99EBA1D2596CC00805887 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0EA99EC11D2596CC00805887;
-			remoteInfo = ImageOfTheDay;
+			remoteInfo = DailyDesktop;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E9A2D261D2AD985007640A6 /* bing-multiple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bing-multiple.json"; sourceTree = "<group>"; };
-		0EA99EC21D2596CC00805887 /* ImageOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA99EC21D2596CC00805887 /* DailyDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99EC51D2596CC00805887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA99EC71D2596CC00805887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA99ECA1D2596CC00805887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0EA99ECC1D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EA99ED11D2596CC00805887 /* ImageOfTheDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageOfTheDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA99ED11D2596CC00805887 /* DailyDesktop.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyDesktop.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99ED71D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA99EED1D259ACC00805887 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		0EA99EF01D25AB1500805887 /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 		0EA99EB91D2596CC00805887 = {
 			isa = PBXGroup;
 			children = (
-				0EA99EC41D2596CC00805887 /* ImageOfTheDay */,
-				0EA99ED41D2596CC00805887 /* ImageOfTheDayTests */,
+				0EA99EC41D2596CC00805887 /* DailyDesktop */,
+				0EA99ED41D2596CC00805887 /* DailyDesktopTests */,
 				0EA99EC31D2596CC00805887 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,13 +88,13 @@
 		0EA99EC31D2596CC00805887 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EA99EC21D2596CC00805887 /* ImageOfTheDay.app */,
-				0EA99ED11D2596CC00805887 /* ImageOfTheDayTests.xctest */,
+				0EA99EC21D2596CC00805887 /* DailyDesktop.app */,
+				0EA99ED11D2596CC00805887 /* DailyDesktop.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0EA99EC41D2596CC00805887 /* ImageOfTheDay */ = {
+		0EA99EC41D2596CC00805887 /* DailyDesktop */ = {
 			isa = PBXGroup;
 			children = (
 				0EA99EE91D259A3600805887 /* App */,
@@ -103,10 +103,10 @@
 				0EA99EFA1D26ED9400805887 /* Networking */,
 				0EA99F0A1D27FA7F00805887 /* Parsers */,
 			);
-			path = ImageOfTheDay;
+			path = DailyDesktop;
 			sourceTree = "<group>";
 		};
-		0EA99ED41D2596CC00805887 /* ImageOfTheDayTests */ = {
+		0EA99ED41D2596CC00805887 /* DailyDesktopTests */ = {
 			isa = PBXGroup;
 			children = (
 				0EA99EEF1D25AACA00805887 /* Fixtures */,
@@ -116,7 +116,7 @@
 				0EA99F0D1D27FAB400805887 /* Parsers */,
 				0EA99F011D26F75800805887 /* Test Helpers */,
 			);
-			path = ImageOfTheDayTests;
+			path = DailyDesktopTests;
 			sourceTree = "<group>";
 		};
 		0EA99EE91D259A3600805887 /* App */ = {
@@ -210,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EA99EC11D2596CC00805887 /* ImageOfTheDay */ = {
+		0EA99EC11D2596CC00805887 /* DailyDesktop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EA99EDA1D2596CC00805887 /* Build configuration list for PBXNativeTarget "ImageOfTheDay" */;
+			buildConfigurationList = 0EA99EDA1D2596CC00805887 /* Build configuration list for PBXNativeTarget "DailyDesktop" */;
 			buildPhases = (
 				0EA99EBE1D2596CC00805887 /* Sources */,
 				0EA99EBF1D2596CC00805887 /* Frameworks */,
@@ -222,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = ImageOfTheDay;
-			productName = ImageOfTheDay;
-			productReference = 0EA99EC21D2596CC00805887 /* ImageOfTheDay.app */;
+			name = DailyDesktop;
+			productName = DailyDesktop;
+			productReference = 0EA99EC21D2596CC00805887 /* DailyDesktop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EA99ED01D2596CC00805887 /* ImageOfTheDayTests */ = {
+		0EA99ED01D2596CC00805887 /* DailyDesktopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EA99EDD1D2596CC00805887 /* Build configuration list for PBXNativeTarget "ImageOfTheDayTests" */;
+			buildConfigurationList = 0EA99EDD1D2596CC00805887 /* Build configuration list for PBXNativeTarget "DailyDesktopTests" */;
 			buildPhases = (
 				0EA99ECD1D2596CC00805887 /* Sources */,
 				0EA99ECE1D2596CC00805887 /* Frameworks */,
@@ -240,9 +240,9 @@
 			dependencies = (
 				0EA99ED31D2596CC00805887 /* PBXTargetDependency */,
 			);
-			name = ImageOfTheDayTests;
-			productName = ImageOfTheDayTests;
-			productReference = 0EA99ED11D2596CC00805887 /* ImageOfTheDayTests.xctest */;
+			name = DailyDesktopTests;
+			productName = DailyDesktopTests;
+			productReference = 0EA99ED11D2596CC00805887 /* DailyDesktop.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -264,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EA99EBD1D2596CC00805887 /* Build configuration list for PBXProject "ImageOfTheDay" */;
+			buildConfigurationList = 0EA99EBD1D2596CC00805887 /* Build configuration list for PBXProject "DailyDesktop" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -277,8 +277,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EA99EC11D2596CC00805887 /* ImageOfTheDay */,
-				0EA99ED01D2596CC00805887 /* ImageOfTheDayTests */,
+				0EA99EC11D2596CC00805887 /* DailyDesktop */,
+				0EA99ED01D2596CC00805887 /* DailyDesktopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,7 +336,7 @@
 /* Begin PBXTargetDependency section */
 		0EA99ED31D2596CC00805887 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EA99EC11D2596CC00805887 /* ImageOfTheDay */;
+			target = 0EA99EC11D2596CC00805887 /* DailyDesktop */;
 			targetProxy = 0EA99ED21D2596CC00805887 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -440,10 +440,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ImageOfTheDay/Info.plist;
+				INFOPLIST_FILE = DailyDesktop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.ImageOfTheDay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktop;
+				PRODUCT_NAME = DailyDesktop;
 			};
 			name = Debug;
 		};
@@ -452,10 +452,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ImageOfTheDay/Info.plist;
+				INFOPLIST_FILE = DailyDesktop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.ImageOfTheDay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktop;
+				PRODUCT_NAME = DailyDesktop;
 			};
 			name = Release;
 		};
@@ -465,12 +465,12 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ImageOfTheDayTests/Info.plist;
+				INFOPLIST_FILE = DailyDesktopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.ImageOfTheDayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktopTests;
+				PRODUCT_NAME = DailyDesktop;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageOfTheDay.app/Contents/MacOS/ImageOfTheDay";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDesktop.app/Contents/MacOS/DailyDesktop";
 			};
 			name = Debug;
 		};
@@ -480,18 +480,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ImageOfTheDayTests/Info.plist;
+				INFOPLIST_FILE = DailyDesktopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.ImageOfTheDayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageOfTheDay.app/Contents/MacOS/ImageOfTheDay";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktopTests;
+				PRODUCT_NAME = DailyDesktop;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDesktop.app/Contents/MacOS/DailyDesktop";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EA99EBD1D2596CC00805887 /* Build configuration list for PBXProject "ImageOfTheDay" */ = {
+		0EA99EBD1D2596CC00805887 /* Build configuration list for PBXProject "DailyDesktop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA99ED81D2596CC00805887 /* Debug */,
@@ -500,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EA99EDA1D2596CC00805887 /* Build configuration list for PBXNativeTarget "ImageOfTheDay" */ = {
+		0EA99EDA1D2596CC00805887 /* Build configuration list for PBXNativeTarget "DailyDesktop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA99EDB1D2596CC00805887 /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EA99EDD1D2596CC00805887 /* Build configuration list for PBXNativeTarget "ImageOfTheDayTests" */ = {
+		0EA99EDD1D2596CC00805887 /* Build configuration list for PBXNativeTarget "DailyDesktopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA99EDE1D2596CC00805887 /* Debug */,

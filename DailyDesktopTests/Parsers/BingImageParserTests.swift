@@ -1,7 +1,7 @@
 //  Created by Paul Williamson on 02/07/2016.
 
 import XCTest
-@testable import ImageOfTheDay
+@testable import DailyDesktop
 
 class BingImageParserTests: XCTestCase {
     func test_BingImageParser_CanParseSingleItem() {

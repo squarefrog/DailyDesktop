@@ -1,7 +1,7 @@
 //  Copyright © 2016 Paul Williamson. All rights reserved.
 
 import XCTest
-@testable import ImageOfTheDay
+@testable import DailyDesktop
 
 class ImageModelTests: XCTestCase {
 
