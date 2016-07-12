@@ -17,10 +17,17 @@
         <customObject id="p2b-xb-yhC" customClass="StatusMenuController" customModule="ImageOfTheDay" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="t7K-Oy-ORW" id="YVY-YT-wOQ"/>
+                <outlet property="updateMenuItem" destination="cOW-Zt-8cI" id="Pbq-EU-QdD"/>
             </connections>
         </customObject>
         <menu id="t7K-Oy-ORW">
             <items>
+                <menuItem title="Update" id="cOW-Zt-8cI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="updateClicked:" target="p2b-xb-yhC" id="1n7-Bn-44A"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="r8J-9q-Tat">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
