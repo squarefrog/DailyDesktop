@@ -42,7 +42,7 @@
 		0EA99EC71D2596CC00805887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA99ECA1D2596CC00805887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0EA99ECC1D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EA99ED11D2596CC00805887 /* DailyDesktop.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyDesktop.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA99ED11D2596CC00805887 /* DailyDesktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyDesktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99ED71D2596CC00805887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA99EED1D259ACC00805887 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		0EA99EF01D25AB1500805887 /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA99EC21D2596CC00805887 /* DailyDesktop.app */,
-				0EA99ED11D2596CC00805887 /* DailyDesktop.xctest */,
+				0EA99ED11D2596CC00805887 /* DailyDesktopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			);
 			name = DailyDesktopTests;
 			productName = DailyDesktopTests;
-			productReference = 0EA99ED11D2596CC00805887 /* DailyDesktop.xctest */;
+			productReference = 0EA99ED11D2596CC00805887 /* DailyDesktopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -468,7 +468,7 @@
 				INFOPLIST_FILE = DailyDesktopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktopTests;
-				PRODUCT_NAME = DailyDesktop;
+				PRODUCT_NAME = DailyDesktopTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDesktop.app/Contents/MacOS/DailyDesktop";
 			};
@@ -483,7 +483,7 @@
 				INFOPLIST_FILE = DailyDesktopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktopTests;
-				PRODUCT_NAME = DailyDesktop;
+				PRODUCT_NAME = DailyDesktopTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDesktop.app/Contents/MacOS/DailyDesktop";
 			};
 			name = Release;
