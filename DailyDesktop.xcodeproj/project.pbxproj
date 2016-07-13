@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E471A651D36B09400904060 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A641D36B09400904060 /* AppController.swift */; };
+		0E471A681D36B49C00904060 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A671D36B49C00904060 /* Updatable.swift */; };
+		0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */; };
 		0E9A2D271D2AD985007640A6 /* bing-multiple.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E9A2D261D2AD985007640A6 /* bing-multiple.json */; };
 		0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EC51D2596CC00805887 /* AppDelegate.swift */; };
 		0EA99EC81D2596CC00805887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC71D2596CC00805887 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0E471A641D36B09400904060 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		0E471A671D36B49C00904060 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuControllerTests.swift; sourceTree = "<group>"; };
 		0E9A2D261D2AD985007640A6 /* bing-multiple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bing-multiple.json"; sourceTree = "<group>"; };
 		0EA99EC21D2596CC00805887 /* DailyDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99EC51D2596CC00805887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E471A661D36B48100904060 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0E471A671D36B49C00904060 /* Updatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0E471A691D36B5C400904060 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		0EA99EB91D2596CC00805887 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +124,7 @@
 				0EA99EF41D25AF6B00805887 /* Models */,
 				0EA99EFA1D26ED9400805887 /* Networking */,
 				0EA99F0A1D27FA7F00805887 /* Parsers */,
+				0E471A661D36B48100904060 /* Protocols */,
 			);
 			path = DailyDesktop;
 			sourceTree = "<group>";
@@ -111,6 +132,7 @@
 		0EA99ED41D2596CC00805887 /* DailyDesktopTests */ = {
 			isa = PBXGroup;
 			children = (
+				0E471A691D36B5C400904060 /* Controllers */,
 				0EA99EEF1D25AACA00805887 /* Fixtures */,
 				0EA99ED71D2596CC00805887 /* Info.plist */,
 				0EA99EF51D25AF7300805887 /* Models */,
@@ -315,6 +337,7 @@
 				0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */,
 				0EA99F051D26F94000805887 /* Result.swift in Sources */,
 				0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */,
+				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,
 				0EA99EF71D25B02100805887 /* ImageModel.swift in Sources */,
 				0EA99F091D27D57900805887 /* Error.swift in Sources */,
@@ -331,6 +354,7 @@
 				0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */,
 				0EA99EF91D25B04000805887 /* ImageModelTests.swift in Sources */,
 				0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */,
+				0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */,
 				0EA99F001D26EE9700805887 /* BingProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

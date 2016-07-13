@@ -6,6 +6,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var updateMenuItem: NSMenuItem!
     @IBOutlet weak var lastUpdatedMenuItem: NSMenuItem!
+    @IBOutlet weak var updateDelegate: Updatable!
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSSquareStatusItemLength)
 
@@ -16,6 +17,7 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func updateClicked(sender: AnyObject) {
+        updateDelegate.update()
     }
 
     @IBAction func quitClicked(sender: NSMenuItem) {

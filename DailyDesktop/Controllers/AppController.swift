@@ -9,3 +9,9 @@ class AppController: NSObject {
         super.awakeFromNib()
     }
 }
+
+extension AppController: Updatable {
+    func update() {
+
+    }
+}
