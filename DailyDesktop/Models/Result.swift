@@ -3,6 +3,6 @@
 import Foundation
 
 enum Result<T> {
-    case Success(T)
-    case Failure(NSError)
+    case success(T)
+    case failure(BingProviderError)
 }

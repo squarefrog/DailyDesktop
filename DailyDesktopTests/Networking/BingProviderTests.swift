@@ -5,12 +5,12 @@ import XCTest
 
 class BingProviderTests: XCTestCase {
 
-    let imageURL = NSURL(string: "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")!
+    let imageURL = URL(string: "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")!
 
     func test_BingProvider_CanBeInstantiatedWithASessionConfiguration() {
 
         // Given
-        let session = NSURLSession.sharedSession()
+        let session = URLSession.shared
 
         // When
         let provider = BingProvider(withSession: session)
@@ -23,7 +23,7 @@ class BingProviderTests: XCTestCase {
     func test_BingProvider_ShouldHaveABaseURL() {
 
         // Given
-        let provider = BingProvider(withSession: NSURLSession.sharedSession())
+        let provider = BingProvider(withSession: URLSession.shared)
 
         // When
         let baseURL = provider.baseURL
@@ -52,25 +52,25 @@ class BingProviderTests: XCTestCase {
 
         // Given
         let session = FakeSession()
-        session.response = NSHTTPURLResponse(URL: imageURL, statusCode: 200, HTTPVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: imageURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         let jsonData = try! Fixture.Bing.nsData()
         session.data = jsonData
         let provider = BingProvider(withSession: session)
-        var returnedData: NSData?
-        let expectation = expectationWithDescription("Should call completion block")
+        var returnedData: Data?
+        let expectation = self.expectation(description: "Should call completion block")
 
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .Success(let d): returnedData = d
-            case .Failure: XCTFail()
+            case .success(let d): returnedData = d
+            case .failure: XCTFail()
             }
             expectation.fulfill()
         }
 
         // Then
-        waitForExpectationsWithTimeout(1.0, handler: nil)
-        XCTAssertEqual(returnedData, jsonData)
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertEqual(returnedData, jsonData as Data)
 
     }
 
@@ -81,21 +81,21 @@ class BingProviderTests: XCTestCase {
         let error = NSError(domain: "bing.tests", code: 404, userInfo: nil)
         session.error = error
         let provider = BingProvider(withSession: session)
-        var returnedError: NSError?
-        let expectation = expectationWithDescription("Should pass error back")
+        var returnedError: BingProviderError?
+        let expectation = self.expectation(description: "Should pass error back")
 
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .Success: XCTFail()
-            case .Failure(let e): returnedError = e
+            case .success: XCTFail()
+            case .failure(let e): returnedError = e
             }
             expectation.fulfill()
         }
 
         // Then
-        waitForExpectationsWithTimeout(1.0, handler: nil)
-        XCTAssertEqual(returnedError, error)
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertEqual(returnedError, BingProviderError.networkError(error))
 
     }
 
@@ -103,23 +103,23 @@ class BingProviderTests: XCTestCase {
 
         // Given
         let session = FakeSession()
-        session.response = NSHTTPURLResponse(URL: imageURL, statusCode: 404, HTTPVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: imageURL, statusCode: 404, httpVersion: nil, headerFields: nil)
         let provider = BingProvider(withSession: session)
-        var returnedError: NSError?
-        let expectation = expectationWithDescription("Should pass error back")
+        var returnedError: BingProviderError?
+        let expectation = self.expectation(description: "Should pass error back")
 
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .Success: XCTFail()
-            case .Failure(let e): returnedError = e
+            case .success: XCTFail()
+            case .failure(let e): returnedError = e
             }
             expectation.fulfill()
         }
 
         // Then
-        waitForExpectationsWithTimeout(1.0, handler: nil)
-        XCTAssertEqual(returnedError, Error(errorCode: .HTTPCode(404)))
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertEqual(returnedError, BingProviderError.httpCode(404))
 
     }
 
@@ -128,21 +128,21 @@ class BingProviderTests: XCTestCase {
         // Given
         let session = FakeSession()
         let provider = BingProvider(withSession: session)
-        var returnedError: NSError?
-        let expectation = expectationWithDescription("Should pass error back")
+        var returnedError: BingProviderError?
+        let expectation = self.expectation(description: "Should pass error back")
 
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .Success: XCTFail()
-            case .Failure(let e): returnedError = e
+            case .success: XCTFail()
+            case .failure(let e): returnedError = e
             }
             expectation.fulfill()
         }
 
         // Then
-        waitForExpectationsWithTimeout(1.0, handler: nil)
-        XCTAssertEqual(returnedError, Error(errorCode: .EmptyResponse))
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertEqual(returnedError, BingProviderError.emptyResponse)
 
     }
 
@@ -150,23 +150,23 @@ class BingProviderTests: XCTestCase {
 
         // Given
         let session = FakeSession()
-        session.response = NSHTTPURLResponse(URL: imageURL, statusCode: 200, HTTPVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: imageURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         let provider = BingProvider(withSession: session)
-        var returnedError: NSError?
-        let expectation = expectationWithDescription("Should pass error back")
+        var returnedError: BingProviderError?
+        let expectation = self.expectation(description: "Should pass error back")
 
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .Success: XCTFail()
-            case .Failure(let e): returnedError = e
+            case .success: XCTFail()
+            case .failure(let e): returnedError = e
             }
             expectation.fulfill()
         }
 
         // Then
-        waitForExpectationsWithTimeout(1.0, handler: nil)
-        XCTAssertEqual(returnedError, Error(errorCode: .EmptyData))
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertEqual(returnedError, BingProviderError.emptyData)
 
     }
 
@@ -176,7 +176,7 @@ class BingProviderTests: XCTestCase {
         let session = FakeSession()
         XCTAssertNil(session.requestedURL)
         let provider = BingProvider(withSession: session)
-        let imageURL = NSURL(string: "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=3")!
+        let imageURL = URL(string: "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=3")!
 
         // When
         provider.fetchLatestImages(withCount: 3) { _ in }

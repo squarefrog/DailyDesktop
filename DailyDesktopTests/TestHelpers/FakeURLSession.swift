@@ -6,18 +6,18 @@ import Foundation
  A mock `NSURLSession` which aids in testing network calls, without ever
  making any real network calls.
  */
-class FakeSession: NSURLSession {
+class FakeSession: URLSession {
 
     /// The `NSURL` requested during network calls.
-    var requestedURL: NSURL?
+    var requestedURL: URL?
 
-    var data: NSData?
-    var response: NSURLResponse?
-    var error: NSError?
+    var data: Data?
+    var response: URLResponse?
+    var error: Error?
 
-    override func dataTaskWithURL(url: NSURL, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask {
+    override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         requestedURL = url
         completionHandler(data, response, error)
-        return NSURLSessionDataTask()
+        return URLSessionDataTask()
     }
 }

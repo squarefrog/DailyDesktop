@@ -8,10 +8,10 @@ import Foundation
 struct ImageModel {
 
     /// The date the image was posted.
-    let date: NSDate
+    let date: Date
 
     /// The location URL of the image.
-    let url: NSURL
+    let url: URL
 
     /// An optional title for the image.
     let title: String?
@@ -20,7 +20,7 @@ struct ImageModel {
     let description: String
 
     /// A link to the web page containing the image.
-    let webPageURL: NSURL
+    let webPageURL: URL
 
 }
 

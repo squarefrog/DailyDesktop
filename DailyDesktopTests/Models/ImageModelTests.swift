@@ -8,11 +8,11 @@ class ImageModelTests: XCTestCase {
     func test_ImageModel_ShouldSetPropertyValues() {
 
         // Given
-        let date = NSDate()
-        let url = NSURL(string: "http://bing.com")!
+        let date = Date()
+        let url = URL(string: "http://bing.com")!
         let title = "An image"
         let description = "Some text about the image"
-        let webPageURL = NSURL(string: "http://google.com")!
+        let webPageURL = URL(string: "http://google.com")!
 
         // When
         let model = ImageModel(date: date,

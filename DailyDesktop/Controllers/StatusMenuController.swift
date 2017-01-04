@@ -8,7 +8,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var lastUpdatedMenuItem: NSMenuItem!
     @IBOutlet weak var updateDelegate: Updatable!
 
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSSquareStatusItemLength)
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
 
     override func awakeFromNib() {
         statusItem.image = NSImage(named: "MenuIcon")
@@ -16,11 +16,11 @@ class StatusMenuController: NSObject {
         lastUpdatedMenuItem.title = "Last updated: never"
     }
 
-    @IBAction func updateClicked(sender: AnyObject) {
+    @IBAction func updateClicked(_ sender: AnyObject) {
         updateDelegate.update()
     }
 
-    @IBAction func quitClicked(sender: NSMenuItem) {
-        NSApplication.sharedApplication().terminate(self)
+    @IBAction func quitClicked(_ sender: NSMenuItem) {
+        NSApplication.shared().terminate(self)
     }
 }

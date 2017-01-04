@@ -8,16 +8,16 @@ import Foundation
 struct BingProvider {
 
     /// The `NSURLSession` to perform network requests through.
-    let session: NSURLSession
+    let session: URLSession
 
     /// The base URL for the image API call
-    let baseURL = NSURL(string: "http://www.bing.com/HPImageArchive.aspx?format=js")!
+    let baseURL = URL(string: "http://www.bing.com/HPImageArchive.aspx?format=js")!
 
     /**
      An initialiser which takes in an `NSURLSession`, and returns a new instance
      of a `BingProvider`.
      */
-    init(withSession session: NSURLSession) {
+    init(withSession session: URLSession) {
         self.session = session
     }
 
@@ -27,7 +27,7 @@ struct BingProvider {
      - parameter completion: Returns a `Result` case when the network call
          completes.
      */
-    func fetchLatestImage(completion: (Result<NSData>) -> ()) {
+    func fetchLatestImage(_ completion: @escaping (Result<Data>) -> ()) {
         fetchLatestImages(withCount: 1, completion: completion)
     }
 
@@ -38,42 +38,42 @@ struct BingProvider {
      - parameter completion: Returns a `Result` case when the network call
          completes.
      */
-    func fetchLatestImages(withCount count: Int, completion: (Result<NSData>) -> ()) {
+    func fetchLatestImages(withCount count: Int, completion: @escaping (Result<Data>) -> ()) {
         let url = buildImageRequestURL(withCount: count)
-        session.dataTaskWithURL(url) { data, response, error in
-            guard error == nil else { return completion(.Failure(error!)) }
+        session.dataTask(with: url, completionHandler: { data, response, error in
+            if let error = error as? NSError {
+                return completion(.failure(BingProviderError.networkError(error)))
+            }
 
-            guard let urlResponse = response as? NSHTTPURLResponse else {
-                return completion(.Failure(Error(errorCode: .EmptyResponse)))
+            guard let urlResponse = response as? HTTPURLResponse else {
+                return completion(.failure(BingProviderError.emptyResponse))
             }
 
             switch urlResponse.statusCode {
             case 200...299: break
             default:
-                let error = Error(errorCode: .HTTPCode(urlResponse.statusCode))
-                return completion(.Failure(error))
+                return completion(.failure(BingProviderError.httpCode(urlResponse.statusCode)))
             }
 
             guard let validData = data else {
-                return completion(.Failure(Error(errorCode: .EmptyData)))
+                return completion(.failure(BingProviderError.emptyData))
             }
 
-            completion(.Success(validData))
-        }
-
+            completion(.success(validData))
+        })
     }
 
     /**
      Builds an image request URL with a supplied image count.
      */
-    private func buildImageRequestURL(withCount count: Int) -> NSURL {
-        let components = NSURLComponents(URL: baseURL, resolvingAgainstBaseURL: false)!
+    private func buildImageRequestURL(withCount count: Int) -> URL {
+        var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)!
         var queryItems = components.queryItems
-        queryItems?.append(NSURLQueryItem(name: "idx", value: "0"))
-        queryItems?.append(NSURLQueryItem(name: "n", value: "\(count)"))
+        queryItems?.append(URLQueryItem(name: "idx", value: "0"))
+        queryItems?.append(URLQueryItem(name: "n", value: "\(count)"))
         components.queryItems = queryItems
 
-        return components.URL!
+        return components.url!
     }
 
 }

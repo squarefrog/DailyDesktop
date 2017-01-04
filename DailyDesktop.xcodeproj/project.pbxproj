@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E14D3A31E1D3FEA003F5616 /* BingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14D3A21E1D3FEA003F5616 /* BingProviderError.swift */; };
 		0E471A651D36B09400904060 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A641D36B09400904060 /* AppController.swift */; };
 		0E471A681D36B49C00904060 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A671D36B49C00904060 /* Updatable.swift */; };
 		0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */; };
@@ -23,7 +24,6 @@
 		0EA99F001D26EE9700805887 /* BingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EFF1D26EE9700805887 /* BingProviderTests.swift */; };
 		0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F021D26F78500805887 /* FakeURLSession.swift */; };
 		0EA99F051D26F94000805887 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F041D26F94000805887 /* Result.swift */; };
-		0EA99F091D27D57900805887 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F081D27D57900805887 /* Error.swift */; };
 		0EA99F0C1D27FAA400805887 /* BingImageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F0B1D27FAA400805887 /* BingImageParser.swift */; };
 		0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F0E1D27FAD300805887 /* BingImageParserTests.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E14D3A21E1D3FEA003F5616 /* BingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderError.swift; sourceTree = "<group>"; };
 		0E471A641D36B09400904060 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		0E471A671D36B49C00904060 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuControllerTests.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		0EA99EFF1D26EE9700805887 /* BingProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderTests.swift; sourceTree = "<group>"; };
 		0EA99F021D26F78500805887 /* FakeURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
 		0EA99F041D26F94000805887 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		0EA99F081D27D57900805887 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0EA99F0B1D27FAA400805887 /* BingImageParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParser.swift; sourceTree = "<group>"; };
 		0EA99F0E1D27FAD300805887 /* BingImageParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +176,6 @@
 		0EA99EF41D25AF6B00805887 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0EA99F081D27D57900805887 /* Error.swift */,
 				0EA99EF61D25B02100805887 /* ImageModel.swift */,
 				0EA99F041D26F94000805887 /* Result.swift */,
 			);
@@ -195,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA99EFC1D26EE5400805887 /* BingProvider.swift */,
+				0E14D3A21E1D3FEA003F5616 /* BingProviderError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -277,14 +277,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Paul Williamson";
 				TargetAttributes = {
 					0EA99EC11D2596CC00805887 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 					0EA99ED01D2596CC00805887 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 0EA99EC11D2596CC00805887;
 					};
 				};
@@ -336,11 +338,11 @@
 			files = (
 				0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */,
 				0EA99F051D26F94000805887 /* Result.swift in Sources */,
+				0E14D3A31E1D3FEA003F5616 /* BingProviderError.swift in Sources */,
 				0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */,
 				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,
 				0EA99EF71D25B02100805887 /* ImageModel.swift in Sources */,
-				0EA99F091D27D57900805887 /* Error.swift in Sources */,
 				0EA99F0C1D27FAA400805887 /* BingImageParser.swift in Sources */,
 				0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */,
 			);
@@ -395,8 +397,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -440,8 +444,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -460,6 +466,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -472,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktop;
 				PRODUCT_NAME = DailyDesktop;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -484,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktop;
 				PRODUCT_NAME = DailyDesktop;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -498,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktopTests;
 				PRODUCT_NAME = DailyDesktopTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDesktop.app/Contents/MacOS/DailyDesktop";
 			};
 			name = Debug;
@@ -512,6 +522,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.squarefrog.DailyDesktopTests;
 				PRODUCT_NAME = DailyDesktopTests;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDesktop.app/Contents/MacOS/DailyDesktop";
 			};
 			name = Release;

@@ -2,8 +2,8 @@
 
 import Foundation
 
-enum FixtureError: ErrorType {
-    case UnknownFile(String)
+enum FixtureError: Error {
+    case unknownFile(String)
 }
 
 enum Fixture: String {
@@ -12,16 +12,16 @@ enum Fixture: String {
     case Bing = "bing"
     case BingMultiple = "bing-multiple"
 
-    func jsonData() throws -> AnyObject {
+    func jsonData() throws -> Any {
         let data = try nsData()
-        return try NSJSONSerialization.JSONObjectWithData(data, options: [ ])
+        return try JSONSerialization.jsonObject(with: data, options: [])
     }
 
-    func nsData() throws -> NSData {
-        let bundle = NSBundle(forClass: Fixture.DummyClass.self)
-        guard let path = bundle.pathForResource(self.rawValue, ofType: "json") else {
-            throw FixtureError.UnknownFile("\(self.rawValue).json")
+    func nsData() throws -> Data {
+        let bundle = Bundle(for: Fixture.DummyClass.self)
+        guard let path = bundle.path(forResource: self.rawValue, ofType: "json") else {
+            throw FixtureError.unknownFile("\(self.rawValue).json")
         }
-        return NSFileManager.defaultManager().contentsAtPath(path)!
+        return FileManager.default.contents(atPath: path)!
     }
 }
