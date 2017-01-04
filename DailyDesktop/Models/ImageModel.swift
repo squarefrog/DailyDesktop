@@ -26,7 +26,7 @@ struct ImageModel {
 
 extension ImageModel: Equatable { }
 
-func ==(lhs: ImageModel, rhs: ImageModel) -> Bool {
+func == (lhs: ImageModel, rhs: ImageModel) -> Bool {
     return lhs.date == rhs.date &&
         lhs.url == rhs.url &&
         lhs.title == rhs.title &&

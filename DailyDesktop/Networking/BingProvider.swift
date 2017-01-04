@@ -27,7 +27,7 @@ struct BingProvider {
      - parameter completion: Returns a `Result` case when the network call
          completes.
      */
-    func fetchLatestImage(_ completion: @escaping (Result<Data>) -> ()) {
+    func fetchLatestImage(_ completion: @escaping (Result<Data>) -> Void) {
         fetchLatestImages(withCount: 1, completion: completion)
     }
 
@@ -38,7 +38,7 @@ struct BingProvider {
      - parameter completion: Returns a `Result` case when the network call
          completes.
      */
-    func fetchLatestImages(withCount count: Int, completion: @escaping (Result<Data>) -> ()) {
+    func fetchLatestImages(withCount count: Int, completion: @escaping (Result<Data>) -> Void) {
         let url = buildImageRequestURL(withCount: count)
         session.dataTask(with: url, completionHandler: { data, response, error in
             if let error = error as? NSError {

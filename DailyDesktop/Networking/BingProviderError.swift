@@ -40,7 +40,7 @@ extension BingProviderError {
 }
 
 extension BingProviderError: Equatable { }
-func ==(lhs: BingProviderError, rhs: BingProviderError) -> Bool {
+func == (lhs: BingProviderError, rhs: BingProviderError) -> Bool {
     switch (lhs, rhs) {
     case (.httpCode(let l), .httpCode(let r)):
         return l == r
@@ -49,7 +49,7 @@ func ==(lhs: BingProviderError, rhs: BingProviderError) -> Bool {
     }
 }
 
-func ==(lhs: BingProviderError?, rhs: BingProviderError) -> Bool {
+func == (lhs: BingProviderError?, rhs: BingProviderError) -> Bool {
     guard let lhs = lhs else { return false }
     return lhs == rhs
 }
