@@ -1,0 +1,6 @@
+# Rules for test target
+opt_in_rules:
+  - nimble_operator
+disabled_rules:
+  - force_try
+  - line_length
