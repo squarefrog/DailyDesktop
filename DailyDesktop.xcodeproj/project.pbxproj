@@ -26,6 +26,7 @@
 		0EA99F051D26F94000805887 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F041D26F94000805887 /* Result.swift */; };
 		0EA99F0C1D27FAA400805887 /* BingImageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F0B1D27FAA400805887 /* BingImageParser.swift */; };
 		0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F0E1D27FAD300805887 /* BingImageParserTests.swift */; };
+		0ED5D96F1E1D80710041514D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5D96E1E1D80710041514D /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		0EA99F041D26F94000805887 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0EA99F0B1D27FAA400805887 /* BingImageParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParser.swift; sourceTree = "<group>"; };
 		0EA99F0E1D27FAD300805887 /* BingImageParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParserTests.swift; sourceTree = "<group>"; };
+		0ED5D96E1E1D80710041514D /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA99F0B1D27FAA400805887 /* BingImageParser.swift */,
+				0ED5D96E1E1D80710041514D /* Response.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,
 				0EA99EF71D25B02100805887 /* ImageModel.swift in Sources */,
+				0ED5D96F1E1D80710041514D /* Response.swift in Sources */,
 				0EA99F0C1D27FAA400805887 /* BingImageParser.swift in Sources */,
 				0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */,
 			);

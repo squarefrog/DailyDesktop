@@ -14,12 +14,21 @@ class FakeSession: URLSession {
     var data: Data?
     var response: URLResponse?
     var error: Error?
+    var dataTask: FakeDataTask?
 
     typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
 
     override func dataTask(with url: URL, completionHandler: @escaping CompletionHandler) -> URLSessionDataTask {
         requestedURL = url
         completionHandler(data, response, error)
-        return URLSessionDataTask()
+        dataTask = FakeDataTask()
+        return dataTask!
+    }
+}
+
+class FakeDataTask: URLSessionDataTask {
+    var resumeCalled = false
+    override func resume() {
+        resumeCalled = true
     }
 }
