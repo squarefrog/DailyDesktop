@@ -11,6 +11,7 @@ class StatusMenuController: NSObject {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
 
     override func awakeFromNib() {
+        super.awakeFromNib()
         statusItem.image = NSImage(named: "MenuIcon")
         statusItem.menu = statusMenu
         lastUpdatedMenuItem.title = "Last updated: never"
