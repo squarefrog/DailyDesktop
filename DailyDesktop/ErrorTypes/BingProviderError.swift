@@ -2,6 +2,12 @@
 
 import Foundation
 
+/// Errors returned by BingProvider
+///
+/// - httpCode: If network request code is not in the 200-299 range
+/// - emptyData: Server returned empty data
+/// - emptyResponse: Server returned empty response
+/// - networkError: Network failure
 enum BingProviderError: Error {
     case httpCode(Int)
     case emptyData

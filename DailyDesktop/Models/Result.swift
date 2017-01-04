@@ -2,6 +2,7 @@
 
 import Foundation
 
+/// The result of a network call.
 enum Result<T> {
     case success(T)
     case failure(BingProviderError)

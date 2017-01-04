@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E14D3A31E1D3FEA003F5616 /* BingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14D3A21E1D3FEA003F5616 /* BingProviderError.swift */; };
 		0E471A651D36B09400904060 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A641D36B09400904060 /* AppController.swift */; };
 		0E471A681D36B49C00904060 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A671D36B49C00904060 /* Updatable.swift */; };
 		0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */; };
+		0E735B781E1D8E16008380FA /* BingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B771E1D8E16008380FA /* BingProviderError.swift */; };
+		0E735B7C1E1D8E77008380FA /* BingImageParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */; };
 		0E9A2D271D2AD985007640A6 /* bing-multiple.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E9A2D261D2AD985007640A6 /* bing-multiple.json */; };
 		0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EC51D2596CC00805887 /* AppDelegate.swift */; };
 		0EA99EC81D2596CC00805887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC71D2596CC00805887 /* Assets.xcassets */; };
@@ -40,10 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E14D3A21E1D3FEA003F5616 /* BingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderError.swift; sourceTree = "<group>"; };
 		0E471A641D36B09400904060 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		0E471A671D36B49C00904060 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuControllerTests.swift; sourceTree = "<group>"; };
+		0E735B771E1D8E16008380FA /* BingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderError.swift; sourceTree = "<group>"; };
+		0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParserError.swift; sourceTree = "<group>"; };
 		0E9A2D261D2AD985007640A6 /* bing-multiple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bing-multiple.json"; sourceTree = "<group>"; };
 		0EA99EC21D2596CC00805887 /* DailyDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99EC51D2596CC00805887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0E735B761E1D8DD8008380FA /* ErrorTypes */ = {
+			isa = PBXGroup;
+			children = (
+				0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */,
+				0E735B771E1D8E16008380FA /* BingProviderError.swift */,
+			);
+			path = ErrorTypes;
+			sourceTree = "<group>";
+		};
 		0EA99EB91D2596CC00805887 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +134,7 @@
 			children = (
 				0EA99EE91D259A3600805887 /* App */,
 				0EA99EEA1D259A4400805887 /* Controllers */,
+				0E735B761E1D8DD8008380FA /* ErrorTypes */,
 				0EA99EF41D25AF6B00805887 /* Models */,
 				0EA99EFA1D26ED9400805887 /* Networking */,
 				0EA99F0A1D27FA7F00805887 /* Parsers */,
@@ -196,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				0EA99EFC1D26EE5400805887 /* BingProvider.swift */,
-				0E14D3A21E1D3FEA003F5616 /* BingProviderError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -359,12 +370,13 @@
 			files = (
 				0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */,
 				0EA99F051D26F94000805887 /* Result.swift in Sources */,
-				0E14D3A31E1D3FEA003F5616 /* BingProviderError.swift in Sources */,
 				0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */,
 				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,
 				0EA99EF71D25B02100805887 /* ImageModel.swift in Sources */,
+				0E735B7C1E1D8E77008380FA /* BingImageParserError.swift in Sources */,
 				0ED5D96F1E1D80710041514D /* Response.swift in Sources */,
+				0E735B781E1D8E16008380FA /* BingProviderError.swift in Sources */,
 				0EA99F0C1D27FAA400805887 /* BingImageParser.swift in Sources */,
 				0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */,
 			);
