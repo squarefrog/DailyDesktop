@@ -58,6 +58,8 @@ struct BingProvider {
         var queryItems = components.queryItems
         queryItems?.append(URLQueryItem(name: "idx", value: "0"))
         queryItems?.append(URLQueryItem(name: "n", value: "\(count)"))
+        let mkt = NSLocale.current.iso3166code
+        queryItems?.append(URLQueryItem(name: "mkt", value: mkt))
         components.queryItems = queryItems
 
         return components.url!

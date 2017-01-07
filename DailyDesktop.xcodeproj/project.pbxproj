@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E101A2D1E20266100F69764 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E101A2C1E20266100F69764 /* FileManagerMock.swift */; };
 		0E101A2F1E20268A00F69764 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */; };
+		0E146CE01E21185E002E390A /* Locale+iso3166.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E146CDF1E21185E002E390A /* Locale+iso3166.swift */; };
 		0E471A651D36B09400904060 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A641D36B09400904060 /* AppController.swift */; };
 		0E471A681D36B49C00904060 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A671D36B49C00904060 /* Updatable.swift */; };
 		0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0E101A2C1E20266100F69764 /* FileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
 		0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
+		0E146CDF1E21185E002E390A /* Locale+iso3166.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+iso3166.swift"; sourceTree = "<group>"; };
 		0E471A641D36B09400904060 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		0E471A671D36B49C00904060 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuControllerTests.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				0E6562AB1E20F29A0004F6EF /* DesktopManager.swift */,
 				0E735B7E1E1D9181008380FA /* ImageManager.swift */,
+				0E146CDF1E21185E002E390A /* Locale+iso3166.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */,
 				0EA99F051D26F94000805887 /* Result.swift in Sources */,
 				0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */,
+				0E146CE01E21185E002E390A /* Locale+iso3166.swift in Sources */,
 				0E735B7F1E1D9181008380FA /* ImageManager.swift in Sources */,
 				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,

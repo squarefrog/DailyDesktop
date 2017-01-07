@@ -5,7 +5,17 @@ import XCTest
 
 class BingProviderTests: XCTestCase {
 
-    let imageURL = URL(string: "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")!
+    var baseURL: URL!
+    var fullURL: URL!
+
+    override func setUp() {
+        super.setUp()
+        var string = "https://www.bing.com/HPImageArchive.aspx?format=js"
+        baseURL = URL(string: string)!
+        let mkt = NSLocale.current.iso3166code
+        string.append("&idx=0&n=1&mkt=\(mkt)")
+        fullURL = URL(string: string)!
+    }
 
     func test_BingProvider_CanBeInstantiatedWithASessionConfiguration() {
 
@@ -44,7 +54,7 @@ class BingProviderTests: XCTestCase {
         provider.fetchLatestImage { _ in }
 
         // Then
-        XCTAssertEqual(session.requestedURL, imageURL)
+        XCTAssertEqual(session.requestedURL, fullURL)
 
     }
 
@@ -52,7 +62,7 @@ class BingProviderTests: XCTestCase {
 
         // Given
         let session = FakeSession()
-        session.response = HTTPURLResponse(url: imageURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: fullURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         let jsonData = try! Fixture.Bing.nsData()
         session.data = jsonData
         let provider = BingProvider(session: session)
@@ -103,7 +113,7 @@ class BingProviderTests: XCTestCase {
 
         // Given
         let session = FakeSession()
-        session.response = HTTPURLResponse(url: imageURL, statusCode: 404, httpVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: fullURL, statusCode: 404, httpVersion: nil, headerFields: nil)
         let provider = BingProvider(session: session)
         var returnedError: BingProviderError?
         let expectation = self.expectation(description: "Should pass error back")
@@ -150,7 +160,7 @@ class BingProviderTests: XCTestCase {
 
         // Given
         let session = FakeSession()
-        session.response = HTTPURLResponse(url: imageURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: fullURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         let provider = BingProvider(session: session)
         var returnedError: BingProviderError?
         let expectation = self.expectation(description: "Should pass error back")
@@ -191,7 +201,8 @@ class BingProviderTests: XCTestCase {
         let session = FakeSession()
         XCTAssertNil(session.requestedURL)
         let provider = BingProvider(session: session)
-        let imageURL = URL(string: "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=3")!
+        let urlString = fullURL.absoluteString.replacingOccurrences(of: "n=1", with: "n=3")
+        let imageURL = URL(string: urlString)!
 
         // When
         provider.fetchLatestImages(count: 3) { _ in }
@@ -231,7 +242,7 @@ class BingProviderTests: XCTestCase {
                                description: "",
                                webPageURL: webUrl)
         let session = FakeSession()
-        session.response = HTTPURLResponse(url: imageURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+        session.response = HTTPURLResponse(url: fullURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         let data = Data()
         session.data = data
         let provider = BingProvider(session: session)
