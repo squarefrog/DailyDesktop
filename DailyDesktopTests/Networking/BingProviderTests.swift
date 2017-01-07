@@ -208,7 +208,6 @@ class BingProviderTests: XCTestCase {
         let webUrl = URL(string: "https://www.bing.com")!
         let model = ImageModel(date: Date(),
                                url: url,
-                               title: nil,
                                description: "",
                                webPageURL: webUrl)
         let session = FakeSession()
@@ -229,7 +228,6 @@ class BingProviderTests: XCTestCase {
         let webUrl = URL(string: "https://www.bing.com")!
         let model = ImageModel(date: Date(),
                                url: url,
-                               title: nil,
                                description: "",
                                webPageURL: webUrl)
         let session = FakeSession()
@@ -262,7 +260,6 @@ class BingProviderTests: XCTestCase {
         let webUrl = URL(string: "https://www.bing.com")!
         let model = ImageModel(date: Date(),
                                url: url,
-                               title: nil,
                                description: "",
                                webPageURL: webUrl)
         let session = FakeSession()

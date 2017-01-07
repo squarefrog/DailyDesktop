@@ -204,7 +204,6 @@ extension ImageManagerTests {
 
         return ImageModel(date: date,
                           url: url,
-                          title: nil,
                           description: "",
                           webPageURL: url)
     }

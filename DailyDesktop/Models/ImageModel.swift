@@ -11,9 +11,6 @@ struct ImageModel {
     /// The location URL of the image.
     let url: URL
 
-    /// An optional title for the image.
-    let title: String?
-
     /// A text description of the image.
     let description: String
 
@@ -42,7 +39,6 @@ extension ImageModel {
 
         self.date = date
         self.url = url
-        self.title = nil
         self.description = description
         self.webPageURL = webPageURL
     }
@@ -53,7 +49,6 @@ extension ImageModel: Equatable { }
 func == (lhs: ImageModel, rhs: ImageModel) -> Bool {
     return lhs.date == rhs.date &&
         lhs.url == rhs.url &&
-        lhs.title == rhs.title &&
         lhs.description == rhs.description &&
         lhs.webPageURL == rhs.webPageURL
 }
