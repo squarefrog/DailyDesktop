@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E101A2D1E20266100F69764 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E101A2C1E20266100F69764 /* FileManagerMock.swift */; };
+		0E101A2F1E20268A00F69764 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */; };
 		0E471A651D36B09400904060 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A641D36B09400904060 /* AppController.swift */; };
 		0E471A681D36B49C00904060 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A671D36B49C00904060 /* Updatable.swift */; };
 		0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */; };
 		0E735B781E1D8E16008380FA /* BingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B771E1D8E16008380FA /* BingProviderError.swift */; };
 		0E735B7C1E1D8E77008380FA /* BingImageParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */; };
+		0E735B7F1E1D9181008380FA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B7E1E1D9181008380FA /* ImageManager.swift */; };
+		0E735B811E1DAFE1008380FA /* ImageManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B801E1DAFE1008380FA /* ImageManagerError.swift */; };
 		0E9A2D271D2AD985007640A6 /* bing-multiple.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E9A2D261D2AD985007640A6 /* bing-multiple.json */; };
 		0EA99EC61D2596CC00805887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99EC51D2596CC00805887 /* AppDelegate.swift */; };
 		0EA99EC81D2596CC00805887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA99EC71D2596CC00805887 /* Assets.xcassets */; };
@@ -28,6 +32,7 @@
 		0EA99F0C1D27FAA400805887 /* BingImageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F0B1D27FAA400805887 /* BingImageParser.swift */; };
 		0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA99F0E1D27FAD300805887 /* BingImageParserTests.swift */; };
 		0ED5D96F1E1D80710041514D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5D96E1E1D80710041514D /* Response.swift */; };
+		0EE83A751E203BE500FDBE8E /* TestImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EE83A741E203BE500FDBE8E /* TestImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E101A2C1E20266100F69764 /* FileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
 		0E471A641D36B09400904060 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		0E471A671D36B49C00904060 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuControllerTests.swift; sourceTree = "<group>"; };
 		0E735B771E1D8E16008380FA /* BingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderError.swift; sourceTree = "<group>"; };
 		0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParserError.swift; sourceTree = "<group>"; };
+		0E735B7E1E1D9181008380FA /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		0E735B801E1DAFE1008380FA /* ImageManagerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerError.swift; sourceTree = "<group>"; };
 		0E9A2D261D2AD985007640A6 /* bing-multiple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bing-multiple.json"; sourceTree = "<group>"; };
 		0EA99EC21D2596CC00805887 /* DailyDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA99EC51D2596CC00805887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +75,7 @@
 		0EA99F0B1D27FAA400805887 /* BingImageParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParser.swift; sourceTree = "<group>"; };
 		0EA99F0E1D27FAD300805887 /* BingImageParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParserTests.swift; sourceTree = "<group>"; };
 		0ED5D96E1E1D80710041514D /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0EE83A741E203BE500FDBE8E /* TestImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TestImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E101A2B1E20261300F69764 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		0E471A661D36B48100904060 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +125,17 @@
 			children = (
 				0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */,
 				0E735B771E1D8E16008380FA /* BingProviderError.swift */,
+				0E735B801E1DAFE1008380FA /* ImageManagerError.swift */,
 			);
 			path = ErrorTypes;
+			sourceTree = "<group>";
+		};
+		0E735B7D1E1D9156008380FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0E735B7E1E1D9181008380FA /* ImageManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		0EA99EB91D2596CC00805887 = {
@@ -139,6 +166,7 @@
 				0EA99EFA1D26ED9400805887 /* Networking */,
 				0EA99F0A1D27FA7F00805887 /* Parsers */,
 				0E471A661D36B48100904060 /* Protocols */,
+				0E735B7D1E1D9156008380FA /* Utilities */,
 			);
 			path = DailyDesktop;
 			sourceTree = "<group>";
@@ -153,6 +181,7 @@
 				0EA99EFB1D26EDB500805887 /* Networking */,
 				0EA99F0D1D27FAB400805887 /* Parsers */,
 				0EA99F011D26F75800805887 /* Test Helpers */,
+				0E101A2B1E20261300F69764 /* Utilities */,
 			);
 			path = DailyDesktopTests;
 			sourceTree = "<group>";
@@ -224,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				0EA99F021D26F78500805887 /* FakeURLSession.swift */,
+				0E101A2C1E20266100F69764 /* FileManagerMock.swift */,
+				0EE83A741E203BE500FDBE8E /* TestImage.jpg */,
 			);
 			name = "Test Helpers";
 			path = TestHelpers;
@@ -340,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA99EF31D25AD9A00805887 /* bing.json in Resources */,
+				0EE83A751E203BE500FDBE8E /* TestImage.jpg in Resources */,
 				0E9A2D271D2AD985007640A6 /* bing-multiple.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,8 +403,10 @@
 				0EA99EEE1D259ACC00805887 /* StatusMenuController.swift in Sources */,
 				0EA99F051D26F94000805887 /* Result.swift in Sources */,
 				0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */,
+				0E735B7F1E1D9181008380FA /* ImageManager.swift in Sources */,
 				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,
+				0E735B811E1DAFE1008380FA /* ImageManagerError.swift in Sources */,
 				0EA99EF71D25B02100805887 /* ImageModel.swift in Sources */,
 				0E735B7C1E1D8E77008380FA /* BingImageParserError.swift in Sources */,
 				0ED5D96F1E1D80710041514D /* Response.swift in Sources */,
@@ -389,6 +423,8 @@
 				0EA99EF11D25AB1500805887 /* Fixture.swift in Sources */,
 				0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */,
 				0EA99EF91D25B04000805887 /* ImageModelTests.swift in Sources */,
+				0E101A2F1E20268A00F69764 /* ImageManagerTests.swift in Sources */,
+				0E101A2D1E20266100F69764 /* FileManagerMock.swift in Sources */,
 				0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */,
 				0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */,
 				0EA99F001D26EE9700805887 /* BingProviderTests.swift in Sources */,
