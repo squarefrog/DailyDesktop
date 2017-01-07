@@ -12,6 +12,9 @@
 		0E471A651D36B09400904060 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A641D36B09400904060 /* AppController.swift */; };
 		0E471A681D36B49C00904060 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A671D36B49C00904060 /* Updatable.swift */; };
 		0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */; };
+		0E6562AC1E20F29A0004F6EF /* DesktopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6562AB1E20F29A0004F6EF /* DesktopManager.swift */; };
+		0E6562AE1E20F2B10004F6EF /* DesktopManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6562AD1E20F2B10004F6EF /* DesktopManagerTests.swift */; };
+		0E6562B01E20F3C80004F6EF /* NSWorkspaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6562AF1E20F3C80004F6EF /* NSWorkspaceMock.swift */; };
 		0E735B781E1D8E16008380FA /* BingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B771E1D8E16008380FA /* BingProviderError.swift */; };
 		0E735B7C1E1D8E77008380FA /* BingImageParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */; };
 		0E735B7F1E1D9181008380FA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E735B7E1E1D9181008380FA /* ImageManager.swift */; };
@@ -51,6 +54,9 @@
 		0E471A641D36B09400904060 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		0E471A671D36B49C00904060 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		0E471A6A1D36B5E100904060 /* StatusMenuControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuControllerTests.swift; sourceTree = "<group>"; };
+		0E6562AB1E20F29A0004F6EF /* DesktopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopManager.swift; sourceTree = "<group>"; };
+		0E6562AD1E20F2B10004F6EF /* DesktopManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopManagerTests.swift; sourceTree = "<group>"; };
+		0E6562AF1E20F3C80004F6EF /* NSWorkspaceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSWorkspaceMock.swift; sourceTree = "<group>"; };
 		0E735B771E1D8E16008380FA /* BingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingProviderError.swift; sourceTree = "<group>"; };
 		0E735B7B1E1D8E77008380FA /* BingImageParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingImageParserError.swift; sourceTree = "<group>"; };
 		0E735B7E1E1D9181008380FA /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		0E101A2B1E20261300F69764 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0E6562AD1E20F2B10004F6EF /* DesktopManagerTests.swift */,
 				0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */,
 			);
 			path = Utilities;
@@ -133,6 +140,7 @@
 		0E735B7D1E1D9156008380FA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0E6562AB1E20F29A0004F6EF /* DesktopManager.swift */,
 				0E735B7E1E1D9181008380FA /* ImageManager.swift */,
 			);
 			path = Utilities;
@@ -254,6 +262,7 @@
 			children = (
 				0EA99F021D26F78500805887 /* FakeURLSession.swift */,
 				0E101A2C1E20266100F69764 /* FileManagerMock.swift */,
+				0E6562AF1E20F3C80004F6EF /* NSWorkspaceMock.swift */,
 				0EE83A741E203BE500FDBE8E /* TestImage.jpg */,
 			);
 			name = "Test Helpers";
@@ -408,6 +417,7 @@
 				0E471A651D36B09400904060 /* AppController.swift in Sources */,
 				0E735B811E1DAFE1008380FA /* ImageManagerError.swift in Sources */,
 				0EA99EF71D25B02100805887 /* ImageModel.swift in Sources */,
+				0E6562AC1E20F29A0004F6EF /* DesktopManager.swift in Sources */,
 				0E735B7C1E1D8E77008380FA /* BingImageParserError.swift in Sources */,
 				0ED5D96F1E1D80710041514D /* Response.swift in Sources */,
 				0E735B781E1D8E16008380FA /* BingProviderError.swift in Sources */,
@@ -422,11 +432,13 @@
 			files = (
 				0EA99EF11D25AB1500805887 /* Fixture.swift in Sources */,
 				0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */,
+				0E6562AE1E20F2B10004F6EF /* DesktopManagerTests.swift in Sources */,
 				0EA99EF91D25B04000805887 /* ImageModelTests.swift in Sources */,
 				0E101A2F1E20268A00F69764 /* ImageManagerTests.swift in Sources */,
 				0E101A2D1E20266100F69764 /* FileManagerMock.swift in Sources */,
 				0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */,
 				0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */,
+				0E6562B01E20F3C80004F6EF /* NSWorkspaceMock.swift in Sources */,
 				0EA99F001D26EE9700805887 /* BingProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
