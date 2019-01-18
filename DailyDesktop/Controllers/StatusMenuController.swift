@@ -8,7 +8,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var lastUpdatedMenuItem: NSMenuItem!
     @IBOutlet weak var updateDelegate: Updatable!
 
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +22,6 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func quitClicked(_ sender: NSMenuItem) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
 }

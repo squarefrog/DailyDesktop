@@ -20,7 +20,7 @@ struct BingImageParser {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
 
-        return try images.flatMap { item in
+        return try images.compactMap { item in
             guard let json = item as? [String: AnyObject] else { return nil }
             return try ImageModel(json: json, dateFormatter: dateFormatter)
         }

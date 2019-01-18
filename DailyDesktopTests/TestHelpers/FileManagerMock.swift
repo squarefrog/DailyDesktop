@@ -13,7 +13,7 @@ class FileManagerMock: FileManager {
         return mockURLs
     }
 
-    override func createDirectory(at url: URL, withIntermediateDirectories createIntermediates: Bool, attributes: [String : Any]? = nil) throws {
+    override func createDirectory(at url: URL, withIntermediateDirectories createIntermediates: Bool, attributes: [FileAttributeKey : Any]? = nil) throws {
         directoryURL = url
         guard !preventCreateDirectory else { return }
         try super.createDirectory(at: url,

@@ -17,7 +17,7 @@ enum Response {
     ///   - error: An error object that indicates why the request failed
     /// - Returns: A parsed result case
     static func parse(data: Data?, response: URLResponse?, error: Error?) -> DataResult {
-        if let error = error as? NSError {
+        if let error = error as NSError? {
             return .failure(BingProviderError.networkError(error))
         }
 
