@@ -63,7 +63,7 @@ class BingProviderTests: XCTestCase {
         // Given
         let session = FakeSession()
         session.response = HTTPURLResponse(url: fullURL, statusCode: 200, httpVersion: nil, headerFields: nil)
-        let jsonData = try! Fixture.Bing.nsData()
+        let jsonData = try! Fixture.bing.nsData()
         session.data = jsonData
         let provider = BingProvider(session: session)
         var returnedData: Data?
@@ -72,8 +72,8 @@ class BingProviderTests: XCTestCase {
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .success(let d): returnedData = d
-            case .failure: XCTFail()
+            case .success(let data): returnedData = data
+            case .failure: XCTFail("Should not return failure result")
             }
             expectation.fulfill()
         }
@@ -97,8 +97,8 @@ class BingProviderTests: XCTestCase {
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .success: XCTFail()
-            case .failure(let e): returnedError = e
+            case .success: XCTFail("Should not return success result")
+            case .failure(let error): returnedError = error
             }
             expectation.fulfill()
         }
@@ -121,8 +121,8 @@ class BingProviderTests: XCTestCase {
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .success: XCTFail()
-            case .failure(let e): returnedError = e
+            case .success: XCTFail("Should not return successful result")
+            case .failure(let error): returnedError = error
             }
             expectation.fulfill()
         }
@@ -144,8 +144,8 @@ class BingProviderTests: XCTestCase {
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .success: XCTFail()
-            case .failure(let e): returnedError = e
+            case .success: XCTFail("Should not return successful result")
+            case .failure(let error): returnedError = error
             }
             expectation.fulfill()
         }
@@ -168,8 +168,8 @@ class BingProviderTests: XCTestCase {
         // When
         provider.fetchLatestImage { result in
             switch result {
-            case .success: XCTFail()
-            case .failure(let e): returnedError = e
+            case .success: XCTFail("Should not return successful result")
+            case .failure(let error): returnedError = error
             }
             expectation.fulfill()
         }
@@ -190,7 +190,7 @@ class BingProviderTests: XCTestCase {
         provider.fetchLatestImage { _ in }
 
         // Then
-        guard let task = session.dataTask else { return XCTFail() }
+        guard let task = session.dataTask else { return XCTFail("Should have valid session data task") }
         XCTAssertTrue(task.resumeCalled)
 
     }
@@ -252,8 +252,8 @@ class BingProviderTests: XCTestCase {
         // When
         provider.download(image: model) { result in
             switch result {
-            case .success(let d): returnedData = d
-            case .failure: XCTFail()
+            case .success(let data): returnedData = data
+            case .failure: XCTFail("Should not return failure result")
             }
             expectation.fulfill()
         }
@@ -280,7 +280,7 @@ class BingProviderTests: XCTestCase {
         provider.download(image: model) { _ in }
 
         // Then
-        guard let task = session.dataTask else { return XCTFail() }
+        guard let task = session.dataTask else { return XCTFail("Should have session dataTask") }
         XCTAssertTrue(task.resumeCalled)
 
     }

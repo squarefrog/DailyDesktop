@@ -51,8 +51,7 @@ class ImageManagerTests: XCTestCase {
         guard let bundleDir = bundleDir else { return XCTFail("No temp dir") }
 
         // When
-        let _ = try? ImageManager(fileManager: fileManager,
-                                  bundleIdentifier: bundleIdentifier)
+        _ = try? ImageManager(fileManager: fileManager, bundleIdentifier: bundleIdentifier)
 
         // Then
         XCTAssertEqual(fileManager.directoryURL, bundleDir)
@@ -67,8 +66,7 @@ class ImageManagerTests: XCTestCase {
         do {
 
             // When
-            let _ = try ImageManager(fileManager: fileManager,
-                                     bundleIdentifier: bundleIdentifier)
+            _ = try ImageManager(fileManager: fileManager, bundleIdentifier: bundleIdentifier)
 
         } catch ImageManagerError.supportDirectoryNotFound {
 
@@ -95,8 +93,8 @@ class ImageManagerTests: XCTestCase {
         do {
 
             // When
-            guard let data = loadTestImageData() else { return XCTFail() }
-            let _ = try manager?.store(data: data, model: imageModel)
+            guard let data = loadTestImageData() else { return XCTFail("Should load test image data") }
+            _ = try manager?.store(data: data, model: imageModel)
 
             // Then
             let realFileManager = FileManager.default
@@ -150,7 +148,7 @@ class ImageManagerTests: XCTestCase {
         do {
 
             // When
-            let _ = try manager?.store(data: Data(), model: imageModel)
+            _ = try manager?.store(data: Data(), model: imageModel)
 
         } catch ImageManagerError.fileExists(let url) {
 
@@ -175,7 +173,7 @@ class ImageManagerTests: XCTestCase {
         do {
 
             // When
-            let _ = try manager?.store(data: Data(), model: imageModel)
+            _ = try manager?.store(data: Data(), model: imageModel)
 
         } catch ImageManagerError.invalidImageData {
 

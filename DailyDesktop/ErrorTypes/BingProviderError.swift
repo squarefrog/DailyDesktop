@@ -18,14 +18,14 @@ enum BingProviderError: Error {
 extension BingProviderError {
     var code: Int {
         switch self {
-        case .httpCode(let c):
-            return c
+        case .httpCode(let code):
+            return code
         case .emptyData:
             return -6000
         case .emptyResponse:
             return -6001
-        case .networkError(let e):
-            return e.code
+        case .networkError(let error):
+            return error.code
         }
     }
 }
@@ -39,8 +39,8 @@ extension BingProviderError {
             return "Server returned empty data."
         case .emptyResponse:
             return "Server returned empty response."
-        case .networkError(let e):
-            return e.localizedDescription
+        case .networkError(let error):
+            return error.localizedDescription
         }
     }
 }
@@ -48,8 +48,8 @@ extension BingProviderError {
 extension BingProviderError: Equatable { }
 func == (lhs: BingProviderError, rhs: BingProviderError) -> Bool {
     switch (lhs, rhs) {
-    case (.httpCode(let l), .httpCode(let r)):
-        return l == r
+    case (.httpCode(let lhsCode), .httpCode(let rhsCode)):
+        return lhsCode == rhsCode
     default:
         return lhs.code == rhs.code
     }

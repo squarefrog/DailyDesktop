@@ -19,7 +19,8 @@ struct ImageManager {
     ///   - bundleIdentifier: Bundle identifier appended to application support path
     /// - Throws: ImageManagerError when Application Support folder missing
     init(fileManager: FileManager, bundleIdentifier: String) throws {
-        self.directory = try ImageManager.applicationDirectory(fileManager: fileManager, bundleIdentifier: bundleIdentifier)
+        self.directory = try ImageManager.applicationDirectory(fileManager: fileManager,
+                                                               bundleIdentifier: bundleIdentifier)
         self.fileManager = fileManager
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -41,7 +42,7 @@ struct ImageManager {
             throw ImageManagerError.fileExists(url)
         }
 
-        guard let _ = NSImage(data: data) else {
+        guard NSImage(data: data) != nil else {
             throw ImageManagerError.invalidImageData
         }
 

@@ -7,7 +7,7 @@ class BingImageParserTests: XCTestCase {
     func test_BingImageParser_CanParseSingleItem() {
 
         // Given
-        let data = try! Fixture.Bing.nsData()
+        let data = try! Fixture.bing.nsData()
 
         // When
         let images = try! BingImageParser().parseData(data)
@@ -32,7 +32,7 @@ class BingImageParserTests: XCTestCase {
     func test_BingImageParser_CanParseMultipleItems() {
 
         // Given
-        let data = try! Fixture.BingMultiple.nsData()
+        let data = try! Fixture.bingMultiple.nsData()
 
         // When
         let images = try! BingImageParser().parseData(data)

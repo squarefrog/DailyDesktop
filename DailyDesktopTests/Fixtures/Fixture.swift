@@ -9,8 +9,8 @@ enum FixtureError: Error {
 enum Fixture: String {
     class DummyClass { }
 
-    case Bing = "bing"
-    case BingMultiple = "bing-multiple"
+    case bing = "bing"
+    case bingMultiple = "bing-multiple"
 
     func jsonData() throws -> Any {
         let data = try nsData()
