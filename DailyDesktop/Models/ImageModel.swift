@@ -19,29 +19,27 @@ struct ImageModel {
 
 }
 
-extension ImageModel {
-    /// Initialise an ImageModel from JSON returned by Bing API
-    init?(json: [String: AnyObject], dateFormatter: DateFormatter) throws {
-        guard
-            let startDate = json["startdate"] as? String,
-            let urlPath = json["url"] as? String,
-            let description = json["copyright"] as? String,
-            let copyrightLink = json["copyrightlink"] as? String,
-            let url = URL(string: "http://www.bing.com\(urlPath)"),
-            let webPageURL = URL(string: copyrightLink)
-            else {
-                throw BingImageParserError.invalidData(json as AnyObject)
-        }
+extension ImageModel: Decodable {
 
-        guard let date = dateFormatter.date(from: startDate) else {
-            throw BingImageParserError.unableToParseDate(startDate)
-        }
-
-        self.date = date
-        self.url = url
-        self.description = description
-        self.webPageURL = webPageURL
+    enum CodingKeys: String, CodingKey {
+        case date = "startdate"
+        case url = "url"
+        case copyright
+        case copyrightLink = "copyrightlink"
     }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        date = try container.decode(Date.self, forKey: .date)
+        description = try container.decode(String.self, forKey: .copyright)
+        webPageURL = try container.decode(URL.self, forKey: .copyrightLink)
+
+        let baseURL = URL(string: "https://www.bing.com")!
+        let path = try container.decode(String.self, forKey: .url)
+        url = baseURL.appendingPathComponent(path)
+    }
+
 }
 
 extension ImageModel: Equatable { }

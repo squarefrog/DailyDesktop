@@ -11,18 +11,9 @@ struct BingImageParser {
     /// - Returns: An array of `ImageModel` objects.
     /// - Throws: Can throw if supplied data cannot be serialised into JSON.
     func parseData(_ data: Data) throws -> [ImageModel] {
-        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
-
-        guard let images = json?["images"] as? [AnyObject] else {
-            throw BingImageParserError.invalidData(json)
-        }
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
-
-        return try images.compactMap { item in
-            guard let json = item as? [String: AnyObject] else { return nil }
-            return try ImageModel(json: json, dateFormatter: dateFormatter)
-        }
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(.bing)
+        let wrapper = try decoder.decode(ResponseWrapper.self, from: data)
+        return wrapper.images
     }
 }

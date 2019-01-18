@@ -23,7 +23,7 @@ class BingImageParserTests: XCTestCase {
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         XCTAssertEqual(image.date, calendar.date(from: date))
 
-        XCTAssertEqual(image.url.absoluteString, "http://www.bing.com/az/hprichbg/rb/DwarfFlyingSquirrel_EN-GB11302868771_1920x1080.jpg")
+        XCTAssertEqual(image.url.absoluteString, "https://www.bing.com/az/hprichbg/rb/DwarfFlyingSquirrel_EN-GB11302868771_1920x1080.jpg")
         XCTAssertEqual(image.description, "Japanese dwarf flying squirrel in Rishiri-Rebun-Sarobetsu National Park, Japan (© HTB/NHK Video Bank Creative/Getty Images)")
         XCTAssertEqual(image.webPageURL.absoluteString, "http://www.bing.com/search?q=Japanese+dwarf+flying+squirrel&form=hpcapt&filters=HpDate:%2220160629_2300%22")
 
@@ -52,7 +52,7 @@ class BingImageParserTests: XCTestCase {
         components.day = 3
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = calendar.date(from: components)!
-        let url = URL(string: "http://www.bing.com/image1.jpg")!
+        let url = URL(string: "https://www.bing.com/image1.jpg")!
         let description = "image 1"
         let webPageURL = URL(string: "http://www.bing.com/image1")!
 
@@ -69,7 +69,7 @@ class BingImageParserTests: XCTestCase {
         components.day = 2
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = calendar.date(from: components)!
-        let url = URL(string: "http://www.bing.com/image2.jpg")!
+        let url = URL(string: "https://www.bing.com/image2.jpg")!
         let description = "image 2"
         let webPageURL = URL(string: "http://www.bing.com/image2")!
 
@@ -86,7 +86,7 @@ class BingImageParserTests: XCTestCase {
         components.day = 1
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = calendar.date(from: components)!
-        let url = URL(string: "http://www.bing.com/image3.jpg")!
+        let url = URL(string: "https://www.bing.com/image3.jpg")!
         let description = "image 3"
         let webPageURL = URL(string: "http://www.bing.com/image3")!
 
