@@ -1,5 +1,7 @@
 # Daily Desktop
 
+[![Build Status](https://travis-ci.org/squarefrog/DailyDesktop.svg?branch=develop)](https://travis-ci.org/squarefrog/DailyDesktop)
+
 Downloads the daily [Bing](https://www.bing.com/) image and sets it as your Desktop wallpaper.
 
 ## Features
