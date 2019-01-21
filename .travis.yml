@@ -3,3 +3,5 @@ xcode_project: DailyDesktop.xcodeproj # path to your xcodeproj folder
 xcode_scheme: DailyDesktop
 xcode_destination: platform=macOS
 osx_image: xcode10.1
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
