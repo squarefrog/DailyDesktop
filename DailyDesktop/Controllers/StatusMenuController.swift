@@ -7,6 +7,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var updateMenuItem: NSMenuItem!
     @IBOutlet weak var lastUpdatedMenuItem: NSMenuItem!
     @IBOutlet weak var updateDelegate: Updatable!
+    var application: Quitable = NSApplication.shared
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
@@ -22,6 +23,6 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func quitClicked(_ sender: NSMenuItem) {
-        NSApplication.shared.terminate(self)
+        application.terminate(self)
     }
 }

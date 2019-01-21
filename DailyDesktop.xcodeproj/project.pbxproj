@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E027D5E21F5DBF50043B446 /* Quitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E027D5D21F5DBF50043B446 /* Quitable.swift */; };
+		0E027D6021F5DF4A0043B446 /* UpdaterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E027D5F21F5DF4A0043B446 /* UpdaterMock.swift */; };
+		0E027D6221F5DFA20043B446 /* NSApplicationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E027D6121F5DFA20043B446 /* NSApplicationMock.swift */; };
 		0E101A2D1E20266100F69764 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E101A2C1E20266100F69764 /* FileManagerMock.swift */; };
 		0E101A2F1E20268A00F69764 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */; };
 		0E146CE01E21185E002E390A /* Locale+iso3166.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E146CDF1E21185E002E390A /* Locale+iso3166.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E027D5D21F5DBF50043B446 /* Quitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quitable.swift; sourceTree = "<group>"; };
+		0E027D5F21F5DF4A0043B446 /* UpdaterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterMock.swift; sourceTree = "<group>"; };
+		0E027D6121F5DFA20043B446 /* NSApplicationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSApplicationMock.swift; sourceTree = "<group>"; };
 		0E101A2C1E20266100F69764 /* FileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
 		0E101A2E1E20268A00F69764 /* ImageManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
 		0E146CDF1E21185E002E390A /* Locale+iso3166.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+iso3166.swift"; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0E471A671D36B49C00904060 /* Updatable.swift */,
+				0E027D5D21F5DBF50043B446 /* Quitable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -276,8 +283,10 @@
 			children = (
 				0EA99F021D26F78500805887 /* FakeURLSession.swift */,
 				0E101A2C1E20266100F69764 /* FileManagerMock.swift */,
+				0E027D6121F5DFA20043B446 /* NSApplicationMock.swift */,
 				0E6562AF1E20F3C80004F6EF /* NSWorkspaceMock.swift */,
 				0EE83A741E203BE500FDBE8E /* TestImage.jpg */,
+				0E027D5F21F5DF4A0043B446 /* UpdaterMock.swift */,
 			);
 			name = "Test Helpers";
 			path = TestHelpers;
@@ -428,6 +437,7 @@
 				0EA99F051D26F94000805887 /* Result.swift in Sources */,
 				0E87262F21F218D5006A8E5D /* ResponseWrapper.swift in Sources */,
 				0EA99EFD1D26EE5400805887 /* BingProvider.swift in Sources */,
+				0E027D5E21F5DBF50043B446 /* Quitable.swift in Sources */,
 				0E146CE01E21185E002E390A /* Locale+iso3166.swift in Sources */,
 				0E735B7F1E1D9181008380FA /* ImageManager.swift in Sources */,
 				0E471A681D36B49C00904060 /* Updatable.swift in Sources */,
@@ -447,10 +457,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA99EF11D25AB1500805887 /* Fixture.swift in Sources */,
+				0E027D6221F5DFA20043B446 /* NSApplicationMock.swift in Sources */,
 				0EA99F031D26F78500805887 /* FakeURLSession.swift in Sources */,
 				0E6562AE1E20F2B10004F6EF /* DesktopManagerTests.swift in Sources */,
 				0EA99EF91D25B04000805887 /* ImageModelTests.swift in Sources */,
 				0E101A2F1E20268A00F69764 /* ImageManagerTests.swift in Sources */,
+				0E027D6021F5DF4A0043B446 /* UpdaterMock.swift in Sources */,
 				0E101A2D1E20266100F69764 /* FileManagerMock.swift in Sources */,
 				0EA99F0F1D27FAD300805887 /* BingImageParserTests.swift in Sources */,
 				0E471A6B1D36B5E100904060 /* StatusMenuControllerTests.swift in Sources */,
