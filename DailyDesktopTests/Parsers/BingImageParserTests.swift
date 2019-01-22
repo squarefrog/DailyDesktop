@@ -45,6 +45,8 @@ class BingImageParserTests: XCTestCase {
 
     }
 
+    // MARK: - Helper functions
+
     private func firstImage() -> ImageModel {
         var components = DateComponents()
         components.year = 2016

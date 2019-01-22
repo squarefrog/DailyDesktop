@@ -8,9 +8,9 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var lastUpdatedMenuItem: NSMenuItem!
     @IBOutlet weak var copyrightMenuItem: NSMenuItem!
     @IBOutlet weak var updateDelegate: Updatable!
-    var application: Quitable = NSApplication.shared
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    var application: Quitable = NSApplication.shared
 
     override func awakeFromNib() {
         super.awakeFromNib()
