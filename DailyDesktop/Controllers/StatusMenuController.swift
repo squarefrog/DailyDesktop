@@ -6,6 +6,7 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var updateMenuItem: NSMenuItem!
     @IBOutlet weak var lastUpdatedMenuItem: NSMenuItem!
+    @IBOutlet weak var copyrightMenuItem: NSMenuItem!
     @IBOutlet weak var updateDelegate: Updatable!
     var application: Quitable = NSApplication.shared
 
@@ -28,5 +29,10 @@ class StatusMenuController: NSObject {
     func setLastUpdatedText(_ text: String?) {
         let time = text ?? "never"
         lastUpdatedMenuItem.title = "Last updated: \(time)"
+    }
+
+    func setCopyrightText(_ text: String) {
+        copyrightMenuItem.isHidden = false
+        copyrightMenuItem.title = text
     }
 }

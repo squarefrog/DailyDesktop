@@ -99,4 +99,19 @@ class StatusMenuControllerTests: XCTestCase {
         XCTAssertEqual(menuItem.title, "Last updated: never")
 
     }
+
+    func test_StatusMenuController_ShouldUpdateCopyrightText() {
+
+        // Given
+        let menuController = StatusMenuController()
+        let menuItem = NSMenuItem()
+        menuController.copyrightMenuItem = menuItem
+
+        // When
+        menuController.setCopyrightText("foo")
+
+        // Then
+        XCTAssertEqual(menuItem.title, "foo")
+
+    }
 }

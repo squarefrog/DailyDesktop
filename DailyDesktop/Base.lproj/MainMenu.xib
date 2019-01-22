@@ -21,6 +21,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="p2b-xb-yhC" customClass="StatusMenuController" customModule="DailyDesktop" customModuleProvider="target">
             <connections>
+                <outlet property="copyrightMenuItem" destination="PzW-6D-Ktk" id="Koc-Lo-BkH"/>
                 <outlet property="lastUpdatedMenuItem" destination="RbF-px-kx6" id="ItN-aC-kGf"/>
                 <outlet property="statusMenu" destination="t7K-Oy-ORW" id="YVY-YT-wOQ"/>
                 <outlet property="updateDelegate" destination="sY9-D6-qnQ" id="3oz-Vv-k1Q"/>
@@ -39,6 +40,10 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Ixb-fz-a6g"/>
+                <menuItem title="Copyright text" hidden="YES" id="PzW-6D-Ktk">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="kL1-R4-bbr"/>
                 <menuItem title="Quit" id="r8J-9q-Tat">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
