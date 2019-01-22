@@ -15,7 +15,6 @@ class StatusMenuController: NSObject {
         super.awakeFromNib()
         statusItem.image = NSImage(named: "MenuIcon")
         statusItem.menu = statusMenu
-        lastUpdatedMenuItem.title = "Last updated: never"
     }
 
     @IBAction func updateClicked(_ sender: AnyObject) {
@@ -24,5 +23,10 @@ class StatusMenuController: NSObject {
 
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         application.terminate(self)
+    }
+
+    func setLastUpdatedText(_ text: String?) {
+        let time = text ?? "never"
+        lastUpdatedMenuItem.title = "Last updated: \(time)"
     }
 }

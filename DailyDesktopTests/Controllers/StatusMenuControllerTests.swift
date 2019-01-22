@@ -69,4 +69,34 @@ class StatusMenuControllerTests: XCTestCase {
         XCTAssertEqual(menuController, expected)
 
     }
+
+    func test_StatusMenuController_ShouldUpdateLastUpdatedText() {
+
+        // Given
+        let menuController = StatusMenuController()
+        let menuItem = NSMenuItem()
+        menuController.lastUpdatedMenuItem = menuItem
+
+        // When
+        menuController.setLastUpdatedText("asdf")
+
+        // Then
+        XCTAssertEqual(menuItem.title, "Last updated: asdf")
+
+    }
+
+    func test_StatusMenuController_ShouldUpdateLastUpdatedTextWithNoInput() {
+
+        // Given
+        let menuController = StatusMenuController()
+        let menuItem = NSMenuItem()
+        menuController.lastUpdatedMenuItem = menuItem
+
+        // When
+        menuController.setLastUpdatedText(nil)
+
+        // Then
+        XCTAssertEqual(menuItem.title, "Last updated: never")
+
+    }
 }
